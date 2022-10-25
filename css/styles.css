@@ -16,6 +16,7 @@ body {
     font-family: Roboto, sans-serif;
     font-size: 14px;
     margin: 0;
+    padding-top: 80px;
 }
 
 .main {
@@ -90,6 +91,12 @@ h1,h2,h3,h4,h5,h6,p,ul {
 }
 
 .header-line {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    min-height: 80px;
+    background-color: var(--white-color);
     border-bottom: 1px solid #ECECEC;
 }
 
@@ -581,6 +588,8 @@ h1,h2,h3,h4,h5,h6,p,ul {
 
 ul .active {
     color: var(--accent-color);
+    border-bottom: 3px solid var(--accent-color);
+    border-radius: 2px;
 }
 
 .footer-text-title {
@@ -694,4 +703,67 @@ ul .active {
 .footer-line {
     display: flex;
     align-items: baseline;
+}
+
+.portfolio-image {
+    position: relative;
+}
+
+.portfolio-image::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--accent-color);
+    opacity: 0;
+}
+
+.portfolio-image:hover::before {
+    opacity: 1;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+   min-width: 528px; 
+   min-height: 581px;
+
+   background-color: var(--white-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.button-close {
+    margin-top: 8px;
+    margin-right: 8px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--white-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+}
+
+.button-close-icon {
+    fill: var(--black-color);
+    width: 18px;
+    height: 18px;
 }
