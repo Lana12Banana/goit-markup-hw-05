@@ -876,8 +876,8 @@ ul .active {
 }
 
 .button-close {
-    margin-top: 8px;
-    margin-right: 8px;
+    margin-top: 9px;
+    margin-right: 9px;
     width: 30px;
     height: 30px;
     background-color: var(--white-color);
@@ -887,8 +887,8 @@ ul .active {
 
 .button-close-icon {
     fill: var(--black-color);
-    width: 18px;
-    height: 18px;
+    width: 11px;
+    height: 11px;
 }
 
 .occupation-card-text {
